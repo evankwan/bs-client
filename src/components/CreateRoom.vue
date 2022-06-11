@@ -6,10 +6,19 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+
+import Api from '../services/Api.js'
+
 export default defineComponent({
   setup() {
-    const createRoom = () => {
-      console.log('function triggered')
+    const createRoom = async () => {
+      try {
+        const response = await Api.createRoom()
+        console.log(response)
+      } catch (error) {
+        console.error(error)
+      }
+      return
     }
 
     return {
