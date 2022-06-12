@@ -7,7 +7,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import Api from '../services/Api.js'
+import Api from '../services/Api'
 
 export default defineComponent({
   setup() {
